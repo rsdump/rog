@@ -1,4 +1,5 @@
 use chrono::Local;
+pub use log::Level::{Debug, Info as Print};
 pub use log::{debug as debugln, info as println, Level};
 use log::{Log, Metadata, Record};
 
