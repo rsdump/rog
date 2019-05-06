@@ -11,7 +11,7 @@ rog = "0.1"
 
 ```rust
 fn main() {
-    rog::init(rog::Level::Info, rog::LTIME);
+    rog::init(rog::Print, rog::LTIME);
     rog::debugln!("Debug");
     rog::println!("Hello");
 }
