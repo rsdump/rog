@@ -2,7 +2,9 @@ use chrono::Local;
 pub use log::{debug as debugln, info as println, Level};
 use log::{Log, Metadata, Record};
 
+/// The date in the local time zone: %Y-%m-%d %H:%M:%S
 pub const LTIME: u8 = 0b0000_0001;
+/// Full module path
 pub const LPATH: u8 = 0b0000_0010;
 
 struct Rog {
@@ -31,6 +33,7 @@ impl Log for Rog {
     fn flush(&self) {}
 }
 
+/// Initializes the global logger with a Level and Format.
 pub fn init(lvl: Level, fmt: u8) {
     let rog = Rog { lvl, fmt };
     let _ = log::set_boxed_logger(Box::new(rog));
