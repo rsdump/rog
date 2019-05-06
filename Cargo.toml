@@ -5,8 +5,8 @@ authors = ["mohanson <mohanson@outlook.com>"]
 edition = "2018"
 description = "A Rust logger"
 license = "WTFPL"
-homepage = "https://github.com/mohanson/rog"
-documentation = "https://github.com/mohanson/rog/blob/master/README.md"
+homepage = "https://github.com/rsdump/rog"
+documentation = "https://github.com/rsdump/rog/blob/master/README.md"
 
 [dependencies]
 chrono = "0.4"
