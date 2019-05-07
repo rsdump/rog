@@ -1,5 +1,7 @@
+use rog::{self, debugln};
+
 fn main() {
-    rog::init(rog::Print, rog::LTIME);
-    rog::debugln!("Debug");
-    rog::println!("Hello");
+    rog::open("main");
+    debugln!("Debug");
+    println!("Print");
 }

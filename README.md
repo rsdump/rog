@@ -1,6 +1,6 @@
 # rog
 
-A Rust logger.
+A Rust logger. Provides and only provides macro `debugln!()`
 
 ```toml
 [dependencies]
@@ -10,17 +10,13 @@ rog = "0.1"
 # Example
 
 ```rust
+use rog::{self, debugln};
+
 fn main() {
-    rog::init(rog::Print, rog::LTIME);
-    rog::debugln!("Debug");
-    rog::println!("Hello");
+    rog::open("main");
+    debugln!("Debug");
+    println!("Print");
 }
-```
-
-This outputs:
-
-```
-2019-05-06 10:57:28 Hello
 ```
 
 You can run the above example with:
