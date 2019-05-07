@@ -7,13 +7,21 @@ A Rust logger. Provides and only provides macro `debugln!()`
 rog = "0.1"
 ```
 
+Tested in the following environments:
+
+- Rust 1.34.0
+
+I am fed up with the days of downloading xx packages in order to print a line of logs. No third-party dependencies, no extra features, make rog simple and pure.
+
 # Example
 
 ```rust
 use rog::{self, debugln};
 
 fn main() {
-    rog::open("main");
+    // Register the module name `main` to rog, so all debug logs under the main
+    // module will be printed.
+    rog::reg(vec!["main"]);
     debugln!("Debug");
     println!("Print");
 }
