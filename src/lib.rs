@@ -1,3 +1,18 @@
+//! A Rust logger. Provides and only provides macro `debugln!()`
+//!
+//! # Example
+//! ```edition2018
+//! use rog::{self, debugln};
+//!
+//! fn main() {
+//!     // Register the module name `main` to rog, so all debug logs under the main
+//!     // module will be printed.
+//!     rog::reg(vec!["main"]);
+//!     debugln!("Debug");
+//!     println!("Print");
+//! }
+//! ```
+
 use std::collections::HashSet;
 pub use std::println;
 
@@ -8,6 +23,7 @@ pub fn cfg() -> &'static mut HashSet<&'static str> {
     unsafe { C.get_or_insert(HashSet::new()) }
 }
 
+/// Debugs to the standard output, with a newline.
 #[macro_export]
 macro_rules! debugln {
     ($($arg:tt)*) => ({
