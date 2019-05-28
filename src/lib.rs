@@ -2,14 +2,12 @@
 //!
 //! # Example
 //! ```edition2018
-//! use rog::{self, debugln};
-//!
 //! fn main() {
 //!     // Register the module name `main` to rog, so all debug logs under the main
 //!     // module will be printed.
-//!     rog::reg(vec!["main"]);
-//!     debugln!("Debug");
-//!     println!("Print");
+//!     rog::reg("main");
+//!     rog::debugln!("Debug");
+//!     rog::println!("Print");
 //! }
 //! ```
 
@@ -35,9 +33,7 @@ macro_rules! debugln {
 }
 
 /// Register a series of module names, the logs in this module will be printed.
-pub fn reg(module: Vec<&'static str>) {
+pub fn reg(module: &'static str) {
     let c = cfg();
-    for e in &module {
-        c.insert(e);
-    }
+    c.insert(module);
 }
