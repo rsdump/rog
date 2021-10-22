@@ -1,7 +1,6 @@
 fn main() {
-    // Register the module name `main` to rog, so all debug logs under the main
-    // module will be printed.
+    // Register the module name `main` to rog, so all debug logs under the main module could be printed.
     rog::reg("main");
-    rog::debugln!("Debug");
-    rog::println!("Print");
+    rog::debugln!("debug");
+    rog::println!("print");
 }

@@ -1,10 +1,10 @@
 [package]
 name = "rog"
-version = "0.1.8"
+version = "0.1.9"
+edition = "2021"
 authors = ["mohanson <mohanson@outlook.com>"]
-edition = "2018"
 description = "A Rust logger"
-license = "WTFPL"
+license = "MIT"
 homepage = "https://github.com/rsdump/rog"
 documentation = "https://github.com/rsdump/rog/blob/master/README.md"
 

@@ -1,14 +1,10 @@
-//! A Rust logger. Provides and only provides macro `debugln!()`
+//! A Rust logger. Provides macro `debugln!()` and `println!()`.
 //!
 //! # Example
-//! ```edition2018
-//! fn main() {
-//!     // Register the module name `main` to rog, so all debug logs under the main
-//!     // module will be printed.
-//!     rog::reg("main");
-//!     rog::debugln!("Debug");
-//!     rog::println!("Print");
-//! }
+//! ```edition2021
+//! rog::reg("main");
+//! rog::debugln!("debug");
+//! rog::println!("print");
 //! ```
 
 use std::collections::HashSet;
